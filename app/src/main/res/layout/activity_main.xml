@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/costume_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fillter_all_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:text="@string/all"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_party_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:paddingHorizontal="20dp"
+                android:text="@string/party"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_camping_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:paddingHorizontal="20dp"
+                android:text="@string/camping"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey"
+                android:textSize="14sp"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_classic_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:paddingHorizontal="20dp"
+                android:text="@string/classic"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_hoodies_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:paddingHorizontal="20dp"
+                android:text="@string/hoodies"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_casual_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/unselected_category_background"
+                android:paddingHorizontal="20dp"
+                android:text="@string/casual"
+                android:textAllCaps="false"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clothes_recycler"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+</LinearLayout>

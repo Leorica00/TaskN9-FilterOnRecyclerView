@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskN9</string>
+    <string name="party">🎉\u00A0\u00A0 Party</string>
+    <string name="camping">🏕️\u00A0\u00A0 Camping</string>
+    <string name="classic">🕴️\u00A0\u00A0 Classic</string>
+    <string name="hoodies">🧥\u00A0\u00A0 Hoodies</string>
+    <string name="casual">👚\u00A0\u00A0 Casual</string>
+    <string name="all">All</string>
+</resources>
