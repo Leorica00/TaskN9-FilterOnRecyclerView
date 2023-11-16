@@ -10,7 +10,8 @@
         android:id="@+id/clothes_iv"
         android:layout_width="150dp"
         android:layout_height="210dp"
-        android:scaleType="center"/>
+        android:scaleType="center"
+        android:importantForAccessibility="no" />
     
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/clothes_name_tv"

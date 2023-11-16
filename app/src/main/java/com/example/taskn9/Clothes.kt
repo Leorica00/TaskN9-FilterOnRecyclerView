@@ -8,6 +8,7 @@ data class Clothes(
 )
 
 enum class CategoryType{
+    All,
     PARTY,
     CAMPING,
     CLASSIC,
