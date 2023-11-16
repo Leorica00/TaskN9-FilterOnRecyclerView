@@ -9,11 +9,13 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="37dp"
         android:id="@+id/category_recycler"
         android:layout_width="match_parent"
-        android:layout_height="80dp"/>
+        android:clipToPadding="false"
+        android:layout_height="80dp"
+        android:paddingStart="37dp"
+        android:layout_marginTop="24dp"
+        tools:ignore="RtlSymmetry" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/clothes_recycler"

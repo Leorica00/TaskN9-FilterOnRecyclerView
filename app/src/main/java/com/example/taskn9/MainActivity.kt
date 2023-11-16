@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clothesRecyclerView: RecyclerView
     private lateinit var categoryRecyclerView: RecyclerView
     private val listOfClothes = mutableListOf<Clothes>()
-    private lateinit var categories: List<Category>
+    private val categories = listOf(CategoryType.All, CategoryType.PARTY, CategoryType.CAMPING, CategoryType.CLASSIC, CategoryType.HOODIES, CategoryType.CASUAL)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUp() {
         giveData()
-        fillCategories()
         setUpClothesRecycler()
         setUpCategoryRecycler()
     }
@@ -59,20 +58,9 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         categoryRecyclerView.adapter = categoryAdapter
         categoryAdapter.setData(categories)
-        categoryAdapter.onItemClick = { button: AppCompatButton, category: Category ->
-            filterOnCategory(button, category.categoryType)
+        categoryAdapter.onItemClick = { button: AppCompatButton, category: CategoryType ->
+            filterOnCategory(button, category)
         }
-    }
-
-    private fun fillCategories() {
-        categories = listOf(
-            Category(categoryType = CategoryType.All),
-            Category(categoryType = CategoryType.PARTY),
-            Category(categoryType = CategoryType.CAMPING),
-            Category(categoryType = CategoryType.CLASSIC),
-            Category(categoryType = CategoryType.HOODIES),
-            Category(categoryType = CategoryType.CASUAL),
-        )
     }
 
     private fun giveData() {
